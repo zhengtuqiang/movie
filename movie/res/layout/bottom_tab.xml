@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    xmlns:tools="http://schemas.android.com/tools"  
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent"  
+    android:background="#fff"  
+    android:orientation="vertical" > 
+
+<FrameLayout 
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:layout_weight="1"
+    android:background="#fff">
+</FrameLayout>
+
+<RadioGroup 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/login_actionbar_bg"
+    android:layout_weight="10"
+    android:layout_marginTop="2dp"  
+    android:gravity="center"
+    android:orientation="horizontal">
+
+   <RadioButton 
+     android:id="@+id/fragment_film"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_weight="1"
+     android:button="@null"
+     android:gravity="center"
+     android:drawableTop="@drawable/tab_test"
+     android:text="@string/radio_film"
+     android:textColor="@color/white"
+     android:textSize="@dimen/radio_text"
+   />
+
+  <RadioButton 
+     android:id="@+id/fragment_cinema"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_weight="1"
+     android:button="@null"
+      android:gravity="center"
+     android:drawableTop="@drawable/tab_test"
+     android:text="@string/radio_cenima"
+     android:textColor="@color/white"
+     android:textSize="@dimen/radio_text"
+   />
+  
+   <RadioButton 
+     android:id="@+id/fragment_community"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_weight="1"
+     android:button="@null"
+      android:gravity="center"
+     android:drawableTop="@drawable/tab_test"
+     android:text="@string/radio_community"
+     android:textColor="@color/white"
+     android:textSize="@dimen/radio_text"
+   />
+  
+   <RadioButton 
+     android:id="@+id/fragment_me"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_weight="1"
+     android:button="@null"
+     android:gravity="center"
+     android:drawableTop="@drawable/tab_test"
+     android:text="@string/radio_me"
+     android:textColor="@color/white"
+     android:textSize="@dimen/radio_text"
+   />
+ 
+ </RadioGroup>
+    "
+
+
+</LinearLayout>
