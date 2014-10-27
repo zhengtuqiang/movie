@@ -19,10 +19,5 @@
         
    </style>    
    
-    <style name="MidRidioL" >
-        <item name="android:button">@drawable/actionbar_mid_btn</item>
-    </style>
-      <style name="MidRidioR" >
-        <item name="android:button">@drawable/actionbar_mid_r_btn</item>
-    </style>
+  
 </resources>

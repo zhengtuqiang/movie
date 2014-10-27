@@ -1334,9 +1334,7 @@ containing a value of this type.
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f0b008c;
-        public static final int LoginActionBar=0x7f0b008f;
-        public static final int MidRidioL=0x7f0b008d;
-        public static final int MidRidioR=0x7f0b008e;
+        public static final int LoginActionBar=0x7f0b008d;
         /**  Mimic text appearance in select_dialog_item.xml 
          */
         public static final int TextAppearance_AppCompat_Base_CompactMenu_Dialog=0x7f0b0063;
