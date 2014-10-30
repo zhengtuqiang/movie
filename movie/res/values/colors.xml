@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-     <color name="edt_border">#514d4d</color>
+     <color name="edt_border">#828081</color>
      <color name="black">#ff000000</color>
      <color name="login_actionbar_bg">#181818</color>
      <color name="white">#ffffff</color>
-     <color name="login_btn_bg">#f34d4d</color>
+     <color name="login_btn_bg">#00afc0</color>
+     <color name="login_bg_start">#003352</color>
+     <color name="login_bg_center">#0483a3</color>
+     <color name="login_bg_end">#013a4e</color>
+     <color name="dark">#FF222222</color>
+    <color name="light">#FFEEEEEE</color> 
 </resources>

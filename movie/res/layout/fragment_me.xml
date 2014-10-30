@@ -1,11 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
     android:orientation="vertical" >
-     <TextView 
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="0"/>
-
-</LinearLayout>
+  <RelativeLayout 
+      android:id="@+id/top"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content">
+       <com.cppstudio.movie.widget.util.CircleImageView
+        android:id="@+id/head_img"
+        android:layout_height="100dp"
+        android:layout_width="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/mm"
+        app:border_color="@color/light"
+        app:border_width="2dp"
+        
+      ></com.cppstudio.movie.widget.util.CircleImageView>
+    
+     <com.cppstudio.movie.widget.util.CircleImageView
+         android:id="@+id/left_img"
+         android:layout_height="45dp"
+         android:layout_width="45dp"
+         android:layout_toLeftOf="@id/head_img"
+         android:layout_centerVertical="true"
+         android:layout_marginRight="20dp"
+         android:src="@drawable/mm"
+         app:border_color="@color/light"
+         app:border_width="2dp"
+         ></com.cppstudio.movie.widget.util.CircleImageView>
+       <com.cppstudio.movie.widget.util.CircleImageView
+         android:id="@+id/right_img"
+         android:layout_height="45dp"
+         android:layout_width="45dp"
+          
+         android:layout_toRightOf="@id/head_img"
+           android:layout_centerVertical="true"
+         android:layout_marginLeft="20dp"
+         android:src="@drawable/mm"
+         app:border_color="@color/light"
+         app:border_width="2dp"
+         ></com.cppstudio.movie.widget.util.CircleImageView>
+  </RelativeLayout>
+   
+       <TextView 
+           android:id="@+id/name"
+           android:layout_height="wrap_content"
+           android:layout_width="wrap_content"
+           android:singleLine="true"
+           android:layout_below="@id/top"
+           android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+           android:gravity="center"
+           android:text="啦啦啦……"
+           android:textSize="10sp"/>
+       <Button 
+           android:id="@+id/sign"
+           android:layout_height="wrap_content"
+           android:layout_width="wrap_content"
+           android:background="@android:color/transparent"
+           android:layout_below="@id/name"
+           android:layout_centerHorizontal="true"
+           android:gravity="top"
+           android:layout_marginTop="3dp"
+           android:text="@string/null_sign"
+           android:textSize="10sp"/>
+       
+      <com.cppstudio.movie.widget.util.CornerListView
+           android:id="@+id/mid"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:background="@drawable/dzu"
+           android:layout_below="@id/sign"
+           android:layout_marginLeft="15dp"
+           android:layout_marginRight="15dp"
+           android:layout_marginTop="15dp"
+           ></com.cppstudio.movie.widget.util.CornerListView>
+      
+         <com.cppstudio.movie.widget.util.CornerListView
+           android:id="@+id/bottom"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:background="@drawable/dzu"
+           android:layout_below="@id/mid"
+           android:layout_marginLeft="15dp"
+           android:layout_marginRight="15dp"
+           android:layout_marginTop="15dp"
+           ></com.cppstudio.movie.widget.util.CornerListView>
+       
+</RelativeLayout>

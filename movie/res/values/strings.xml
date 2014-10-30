@@ -13,4 +13,11 @@
     <string name="radio_me">我的</string>
     <string name="mid_left_btn">正在热映</string>
     <string name="mid_right_btn">即将上映</string>
+    <string name="null_sign">这个人很懒，什么都没有留下……</string>
+    <string name="my_account">我的账户</string>
+    <string name="my_friends">我的影友</string>
+    <string name="my_collect">我的收藏</string>
+    <string name="details">订单详情</string>
+    <string name="sdv">优惠券</string>
+    <string name="settings">设置</string>
 </resources>

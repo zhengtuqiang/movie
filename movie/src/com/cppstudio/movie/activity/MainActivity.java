@@ -64,12 +64,18 @@ public class MainActivity extends ActionBarActivity{
 	    	radioMe=(RadioButton)findViewById(R.id.fragment_me);
 	    	radioMe .setOnClickListener(new switchFragment());
 	    	
-	    	fragment = new FilmFragment();  
+	    	fragment = new FilmFragment1();
+	    	//fragment = new FilmFragment();
             tool.setActionBar(R.layout.film_actionbar);  
             radioFilm.setTextColor(getResources().getColor(R.color.black));  
 	        
             fManager =getSupportFragmentManager();  
-           
+            if (fragment != null) {  
+                fManager.beginTransaction()  
+                        .replace(R.id.content, fragment).commit();  
+            } else {  
+                Log.e("MainActivity", "Error in creating fragment");  
+            }  
            
 	    }
 	    
@@ -97,7 +103,8 @@ public class MainActivity extends ActionBarActivity{
 				initBtn();
 				switch(view.getId()){
 				case R.id.fragment_film:
-					fragment = new FilmFragment();  
+					//fragment = new FilmFragment(); 
+					fragment = new FilmFragment1();
 	                tool.setActionBar(R.layout.film_actionbar);  
 	                radioFilm.setTextColor(getResources().getColor(R.color.black));  
 					//btn_my.setCompoundDrawablesWithIntrinsicBounds(null,   

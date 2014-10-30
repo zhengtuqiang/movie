@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         
-         android:drawableLeft="@drawable/edt_acc_icon"
+        android:drawableLeft="@drawable/edt_acc_icon"
         android:hint="手机号/邮箱/用户名"
         android:singleLine="true"
         android:background="@drawable/rounded_edittext"/>
