@@ -38,41 +38,23 @@ public class CornerListView extends ListView{
                 {    
                         if(itemnum==0){  
                                 if(itemnum==(getAdapter().getCount()-1)){                                      
-                                    setSelector(R.drawable.list_corner_down);  
+                                    setSelector(R.drawable.list_corner_bottom_selector);  //只有一项
                                 }else{  
-                                    setSelector(R.drawable.list_corner_top_down);  
+                                    setSelector(R.drawable.list_corner_mid_selector);  //第一项 
                                 }  
                         }else if(itemnum==(getAdapter().getCount()-1))  
-                                setSelector(R.drawable.list_corner_bottom_down);  
+                                setSelector(R.drawable.list_corner_bottom_selector);   //最后一项
                         else{                              
-                                setSelector(R.drawable.list_corner_mid_down);  
+                                setSelector(R.drawable.list_corner_mid_selector);   //中间项
                         }  
                 }  
   
                 break;  
         case MotionEvent.ACTION_UP:  
-        	int x1 = (int) ev.getX();  
-            int y1 = (int) ev.getY();  
-            int itemnum1 = pointToPosition(x1, y1);
-
-             if (itemnum1 == AdapterView.INVALID_POSITION)  
-                     break;                   
-             else  
-             {    
-                     if(itemnum1==0){  
-                             if(itemnum1==(getAdapter().getCount()-1)){                                      
-                                 setSelector(R.drawable.list_corner_up);  
-                             }else{  
-                                 setSelector(R.drawable.list_corner_top_up);  
-                             }  
-                     }else if(itemnum1==(getAdapter().getCount()-1))  
-                             setSelector(R.drawable.list_corner_bottom_up);  
-                     else{                              
-                             setSelector(R.drawable.list_corner_mid_up);  
-                     }  
-             }  
+        	
                 break;  
         }  
-        return super.onInterceptTouchEvent(ev);  
+      return super.onInterceptTouchEvent(ev);  
+    	
     }  
 }

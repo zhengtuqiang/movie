@@ -10,4 +10,5 @@
      <color name="login_bg_end">#013a4e</color>
      <color name="dark">#FF222222</color>
     <color name="light">#FFEEEEEE</color> 
+    <color name="half_transparent">#e0000000</color>
 </resources>

@@ -14,15 +14,15 @@ import android.view.View;
 
 public class ActionBarTool {
    private ActionBarActivity activity;
-   
+   private ActionBar actionbar;
    public ActionBarTool(ActionBarActivity activity){
 	   this.activity=activity;
    }
    
    public void setActionBar(int resource){
 	   
-	   ActionBar actionbar=activity.getSupportActionBar();
-       ActionBar.LayoutParams params=new ActionBar.LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT,Gravity.CENTER );
+	    actionbar=activity.getSupportActionBar();
+        ActionBar.LayoutParams params=new ActionBar.LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT,Gravity.CENTER );
       // actionbar.setCustomView(LayoutInflater.from(this.getApplicationContext()).inflate(R.layout.login_actionbar, null),params); 
       // actionbar.setCustomView(LayoutInflater.from(this.getApplicationContext()).inflate(R.layout.film_actionbar, null),params); 
       // actionbar.setCustomView(LayoutInflater.from(this.getApplicationContext()).inflate(R.layout.cinema_actionbar, null),params);
@@ -31,6 +31,11 @@ public class ActionBarTool {
        actionbar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);  
        actionbar.setDisplayShowHomeEnabled(false);
        actionbar.setDisplayShowTitleEnabled(false);
+   }
+   
+   public View getMyActionBar(){
+	    
+	   return  actionbar.getCustomView();
    }
    
    

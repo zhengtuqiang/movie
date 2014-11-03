@@ -2,6 +2,7 @@ package com.cppstudio.movie.fragment;
 
 import com.cppstudio.movie.activity.R;
 import com.cppstudio.movie.adapter.ImageAdapter;
+import com.cppstudio.movie.widget.util.ActionBarTool;
 
 
 import android.os.Bundle;
@@ -25,20 +26,22 @@ public class FilmFragment extends Fragment implements OnItemSelectedListener,OnI
      private Gallery mGallery;
 	 
      private int showingIndex = -1;   
-       
-     private int toShowIndex = 0;   
+     private int toShowIndex = 0;  
+     
+     
      
      @Override  
 	    public void onActivityCreated(Bundle savedInstanceState) {  
 	        // TODO Auto-generated method stub  
 	        super.onActivityCreated(savedInstanceState);  
-	    
+	       
 	 }  
 	  
 	    @Override  
 	    public View onCreateView(LayoutInflater inflater, ViewGroup container,  
 	            Bundle savedInstanceState) {  
-	       View view=inflater.inflate(R.layout.fragment_film, container, false);
+	       
+	    	View view=inflater.inflate(R.layout.fragment_film, container, false);
 	       mGallery=(Gallery)view.findViewById(R.id.film_gallery);
 	       adapter=new ImageAdapter(this.getActivity());
 	       mGallery.setAdapter(adapter);
