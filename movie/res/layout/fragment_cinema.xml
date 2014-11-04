@@ -60,4 +60,15 @@
             android:textSize="12sp"
             />
     </RelativeLayout>
+     <com.cppstudio.movie.widget.util.CornerListView 
+        android:id="@+id/list_near"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:background="@drawable/list_corner_bottom_up"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:divider="@color/white"
+        android:dividerHeight="1dp"
+        />
 </LinearLayout>

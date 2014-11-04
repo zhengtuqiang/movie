@@ -28,17 +28,20 @@ import android.widget.Toast;
 
 public class CinemaFragment extends Fragment {
 	
-	private CornerListView listview;
-	private CinemaListViewAdapter adapter;
-	private List<Cinema> list;//adapter的数据
+	private CornerListView listviewTop;
+	private CornerListView listviewBottom;
+	private CinemaListViewAdapter topAdapter;
+	private CinemaListViewAdapter bottomAdapter;
+	private List<Cinema> tList;//topAdapter的数据
+	private List<Cinema> bList;//bottomAdapter的数据 
 	private Cinema[] cinemas;//总的数据
 	private static int index=0;//数组下标
-	private int count ;//数组长度
+	private int count; //数组长度
 	private boolean flag=false;//判断是否已addfootview
 	private ImageView more;
 	private View footView;
-	private int MAX_NUM=5;
-	private int lastIndex;
+	
+	
 	private Handler handler=new Handler();;
 	
 	 @Override  
@@ -71,62 +74,93 @@ public class CinemaFragment extends Fragment {
 	    @Override  
 	    public View onCreateView(LayoutInflater inflater, ViewGroup container,  
 	            Bundle savedInstanceState) {  
+	    	
 	    	View view=inflater.inflate(R.layout.fragment_cinema, container, false);
-	        listview=(CornerListView)view.findViewById(R.id.list_often);
+	        listviewTop=(CornerListView)view.findViewById(R.id.list_often);
+	        listviewBottom=(CornerListView)view.findViewById(R.id.list_near);
+	        
 	        footView=LayoutInflater.from(getActivity()).inflate(R.layout.footview, null);
 	        more=(ImageView)footView.findViewById(R.id.arrow_down);
+	        initTop();
+	        initBottom();
 	        
-	        list=new ArrayList<Cinema>();
-	        
-	        cinemas=new Cinema[10];
-	        for(int i=0;i<10;i++){
-	        	Cinema cinema=new Cinema();
-	        	cinema.setName("大地影院（湛江店）");
-	        	cinema.setAddress("广东省湛江市霞山区XXX街道");
-	        	cinemas[i]=cinema;
-	        }
-	        
-	        count=cinemas.length;
-	        Log.v("-_-!", ""+count);
-	        
-	        	if(count<=3){//不足或等于三个
-	        		for(int j=0;j<count;j++){
-		        		list.add(cinemas[index++]);
-		        	 }
-	        	    adapter=new CinemaListViewAdapter(this.getActivity(),list);
-	        		index=0;
-	        	}else{
-	        		for(int j=0;j<3;j++){
-		        		list.add(cinemas[index++]);
-		        	 }
-	        		 if(!flag){
-	        	    	 adapter=new CinemaListViewAdapter(this.getActivity(),list);
-	        	    	 listview.addFooterView(footView, null, false);
-	        	    	 flag=true;
-	        	      }
-	        		adapter=new CinemaListViewAdapter(this.getActivity(),list);
-	        	}
-	        
-	      listview.setAdapter(adapter);
+	     
 	      return view;  
 	    } 
+	    
+	    
 	   
-	    private void load(){
+	    @Override
+		public void onDestroyView() {
+			// TODO Auto-generated method stub
+			super.onDestroyView();
+			
+			bList=null;
+			cinemas=null;
+		}
+	    private void initTop(){
+	    	tList=new ArrayList<Cinema>();
+	    	Cinema cinema=new Cinema();
+        	cinema.setName("大地影院（湛江店）");
+        	cinema.setAddress("广东省湛江市霞山区XXX街道");
+        	tList.add(cinema);
+	    	topAdapter=new CinemaListViewAdapter(getActivity(),tList);
+	    	listviewTop.setAdapter(topAdapter);
+	    	cinema=null;
+	    }
+	    
+	    
+	    private void initBottom(){
+	    	    index=0;
+	    	    bList=new ArrayList<Cinema>();
+		        cinemas=new Cinema[10];
+		        for(int i=0;i<10;i++){
+		        	Cinema cinema=new Cinema();
+		        	cinema.setName("大地影院（湛江店）");
+		        	cinema.setAddress("广东省湛江市霞山区XXX街道");
+		        	cinemas[i]=cinema;
+		        	cinema=null;
+		        	
+		        }
+		        count=cinemas.length;
+		        Log.v("-_-!", ""+count);
+		        
+		        	if(count<=3){//不足或等于三个
+		        		for(int j=0;j<count;j++){
+		        			bList.add(cinemas[index++]);
+			        	 }
+		        		bottomAdapter=new CinemaListViewAdapter(this.getActivity(),bList);
+		        		index=0;
+		        	}else{
+		        		for(int j=0;j<3;j++){
+		        			bList.add(cinemas[index++]);
+			        	 }
+		        		 if(!flag){
+		        			 bottomAdapter=new CinemaListViewAdapter(this.getActivity(),bList);
+		        	    	 listviewBottom.addFooterView(footView, null, false);
+		        	    	 flag=true;
+		        	      }
+		        		 bottomAdapter=new CinemaListViewAdapter(this.getActivity(),bList);
+		        	}
+		        	listviewBottom.setAdapter(bottomAdapter);
+	    }
+
+		private void load(){
 	    
 	    	 if(count>3&&(count-index)>3){//超出三个，再判断一次循环后，是否还足三个
 	        	   for(int j=0;j<3;j++){
-	        		  list.add(cinemas[index++]);
+	        		   bList.add(cinemas[index++]);
 	        		 
 	        	    } 
-	        	   adapter.notifyDataSetChanged();
+	        	   bottomAdapter.notifyDataSetChanged();
 	        	    
 	        	  }else if((count-index)<=3){//循环后不超出三个
 		        		for(int j=0;j<(count-index);j++){
-			        		list.add(cinemas[index++]);
+			        		bList.add(cinemas[index++]);
 			        		
 			        	}
-		             adapter.notifyDataSetChanged();
-		             listview.removeFooterView(footView);
+		        	 bottomAdapter.notifyDataSetChanged();
+		             listviewBottom.removeFooterView(footView);
 		             flag=false;
 		             index=0;
 	        	  }

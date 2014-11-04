@@ -8,13 +8,17 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="left"
-        android:paddingRight="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="10dp"
         android:textSize="16sp"
         ></TextView>
     <TextView 
         android:id="@+id/cinema_address"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="3dp"
         android:gravity="left"
         android:paddingRight="10dp"
         android:textSize="12sp"

@@ -78,6 +78,7 @@
        </RelativeLayout>
        
     <RelativeLayout 
+        android:id="@+id/account"
         android:clickable="true"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
@@ -85,10 +86,33 @@
         android:layout_marginRight="5dp"
         android:layout_marginTop="12dp"
         android:background="@drawable/list_corner_top_selector">
-        <include layout="@layout/connerlistview_item"/>
+         <TextView
+        android:id="@+id/account_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:text="@string/my_account"
+        android:textSize="15sp"
+        ></TextView>
+         
+        <ImageView 
+       
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/gyu"
+        ></ImageView>
     </RelativeLayout>
    
     <RelativeLayout 
+        android:id="@+id/friends"
         android:clickable="true"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
@@ -96,10 +120,33 @@
         android:layout_marginRight="5dp"
         android:background="@drawable/list_corner_mid_selector"
         >
-      <include layout="@layout/connerlistview_item"/>
+      <TextView
+        android:id="@+id/friends_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:text="@string/my_friends"
+        android:textSize="15sp"
+        ></TextView>
+         
+        <ImageView 
+       
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/gyu"
+        ></ImageView>
     </RelativeLayout>
     
     <RelativeLayout 
+        android:id="@+id/collection"
         android:clickable="true"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
@@ -107,10 +154,33 @@
         android:layout_marginRight="5dp"
         android:background="@drawable/list_corner_bottom_selector"
         >
-      <include layout="@layout/connerlistview_item"/>
+      <TextView
+        android:id="@+id/collection_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:text="@string/my_collect"
+        android:textSize="15sp"
+        ></TextView>
+         
+        <ImageView 
+        
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/gyu"
+        ></ImageView>
     </RelativeLayout>
     
       <RelativeLayout 
+        android:id="@+id/order_form"
         android:clickable="true"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
@@ -118,10 +188,33 @@
         android:layout_marginRight="5dp"
         android:layout_marginTop="12dp"
         android:background="@drawable/list_corner_top_selector">
-        <include layout="@layout/connerlistview_item"/>
+        <TextView
+        android:id="@+id/order_form_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:text="@string/details"
+        android:textSize="15sp"
+        ></TextView>
+         
+        <ImageView 
+        
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/gyu"
+        ></ImageView>
     </RelativeLayout>
    
     <RelativeLayout 
+        android:id="@+id/coupon"
         android:clickable="true"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
@@ -130,10 +223,33 @@
         android:layout_marginRight="5dp"
         android:background="@drawable/list_corner_mid_selector"
         >
-      <include layout="@layout/connerlistview_item"/>
+       <TextView
+        android:id="@+id/coupon_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:text="@string/coupon"
+        android:textSize="15sp"
+        ></TextView>
+         
+        <ImageView 
+  
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/gyu"
+        ></ImageView>
     </RelativeLayout>
     
     <RelativeLayout 
+        android:id="@+id/settings"
         android:clickable="true"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
@@ -141,7 +257,29 @@
         android:layout_marginRight="5dp"
         android:background="@drawable/list_corner_bottom_selector"
         >
-      <include layout="@layout/connerlistview_item"/>
+      <TextView
+        android:id="@+id/settings_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:text="@string/settings"
+        android:textSize="15sp"
+        ></TextView>
+         
+        <ImageView 
+        
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/gyu"
+        ></ImageView>
     </RelativeLayout>
 
 </LinearLayout>

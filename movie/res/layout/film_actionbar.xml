@@ -5,13 +5,14 @@
     android:gravity="center"
      >
  
-    <Spinner 
+    <Button 
       android:layout_centerVertical="true"
       android:id="@+id/location"
       android:layout_alignParentLeft="true"
       android:layout_marginLeft="10dp"
       android:layout_height="wrap_content"
       android:layout_width="wrap_content"
+      android:text="湛江"
      /> 
   
 
@@ -19,35 +20,35 @@
       android:id="@+id/mid"
       android:layout_height="wrap_content"
       android:layout_width="wrap_content"
-      android:layout_toRightOf="@id/location"
-      android:layout_centerVertical="true"
+      android:layout_centerInParent="true"
+      
       android:gravity="center"
       android:orientation="horizontal"
     >
          <RadioButton 
            android:button="@null"
-           android:background="@drawable/actionbar_mid_r_bg"
+           android:background="@drawable/actionbar_mid_l_btn_selector"
            
            android:id="@+id/btn_left"
            android:layout_height="wrap_content"
            android:layout_width="wrap_content"
            android:layout_weight="1"
            android:text="@string/mid_left_btn"
-           android:textColor="@color/black"
+           android:textColor="@drawable/actionbar_mid_btn_text_selector"
            android:padding="5dp"
           />   
           
        <RadioButton 
            
             android:button="@null"
-           android:background="@drawable/actionbar_mid_r_bg"
+          android:background="@drawable/actionbar_mid_r_btn_selector"
            
            android:id="@+id/btn_right"
            android:layout_height="wrap_content"
            android:layout_width="wrap_content"
            android:layout_weight="1"
            android:text="@string/mid_right_btn"
-           android:textColor="@color/black"
+           android:textColor="@drawable/actionbar_mid_btn_text_selector"
            android:padding="5dp"
           />
      </RadioGroup>
